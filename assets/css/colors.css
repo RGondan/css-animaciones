@@ -1,8 +1,9 @@
 body {
-    --color-1: #D9B5EE;
-    --color-2: #FFFFFF;
-    --color-3: #665DAF;
-    --color-4: #1A1340;
+    --color-1: #d93b3a;
+    --color-2: #eb793d;
+    --color-3: #c5e4e6;
+    --color-4: #756a7a;
+    --color-5: #2b2622;
 
     --font-color-1: #000000;
     --font-color-2: #ffffff;
@@ -14,25 +15,33 @@ body {
 }
 
 header {
-    background-color: var(--color-3);
+    background-color: var(--color-5);
     color: var(--font-color-1);
 }
 
 menu {
-    background-color: var(--color-2);
+    background-color: var(--color-1);
     color: var(--font-color-1);
 }
 
 main {
-    background-color: var(--color-4);
+    background-color: var(--color-5);
     color: var(--font-color-2);
 }
 
-footer {
-    background-color: var(--color-3);
-    color: var(--font-color-1);
+footer, footer ul {
+    background-color: var(--color-5);
+    color: var(--color-4);
 }
 
-* {
-    border-color: var(--color-1);
+footer ul{
+    transition: color 0.3s;
+}
+
+footer li:hover {
+    color: var(--color-3)
+}
+
+.gallery-wraper {
+    background-color: var(--color-5);
 }

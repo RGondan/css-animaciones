@@ -26,6 +26,10 @@ h1 img {
     height: 100px;
 }
 
+menu img {
+    width: 100%;
+}
+
 .gallery-wraper {
     min-height: 500px;
     height: 20vh;    
@@ -58,7 +62,7 @@ h1 img {
         }
 
         img {
-            height: 200%;
+            height: 100%;
 
             position: absolute;
             top: 50%;
@@ -111,7 +115,7 @@ h1 img {
                 width: 150%;
                 height: auto;
 
-                transform: translate(-50%, -40%);
+                transform: translate(-50%, -50%);
                 
                 transition: width 0.3s;
             }
@@ -127,4 +131,10 @@ h1 img {
             }
         }
     }
+}
+
+footer ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
 }
