@@ -1,0 +1,38 @@
+body {
+    --color-1: #D9B5EE;
+    --color-2: #FFFFFF;
+    --color-3: #665DAF;
+    --color-4: #1A1340;
+
+    --font-color-1: #000000;
+    --font-color-2: #ffffff;
+
+    --trans-color-1: #00000049;
+
+    height: 100vh;
+    width: 100vw;
+}
+
+header {
+    background-color: var(--color-3);
+    color: var(--font-color-1);
+}
+
+menu {
+    background-color: var(--color-2);
+    color: var(--font-color-1);
+}
+
+main {
+    background-color: var(--color-4);
+    color: var(--font-color-2);
+}
+
+footer {
+    background-color: var(--color-3);
+    color: var(--font-color-1);
+}
+
+* {
+    border-color: var(--color-1);
+}

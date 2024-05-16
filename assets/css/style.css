@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    width: fit-content;
+    height: fit-content;
+}
+
+header, footer, main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header, footer, menu {
+    padding: 1rem;
+}
+
+ul, li {
+    list-style: none;
+}
+
+h1 img {
+    height: 100px;
+}
+
+.gallery-wraper {
+    min-height: 500px;
+    height: 20vh;    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    .gallery-img {
+        height: 100%;
+        width: 15%;
+        overflow: hidden;
+        position: relative;
+
+        transition: width 0.3s;
+
+        .img-tittle{
+            /*POSITION*/
+            position: absolute;
+            bottom: 0;
+            z-index: 1;
+            text-align: center;
+
+            /*DIMENSIONS*/
+            width: 100%;
+
+            /*COLORS*/
+            background-color: var(--trans-color-1);
+            color: var(--font-color-2);
+        }
+
+        img {
+            height: 200%;
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+            
+            transition: height 0.3s;
+        }
+
+    }
+
+    .gallery-img:hover {
+        width: 75%;
+
+        img {
+            height: 150%;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    menu {
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .gallery-wraper {  
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        .gallery-img {
+            height: 15%;
+            width: 100%;
+    
+            transition: height 0.3s;
+            
+            .img-tittle{
+                /*POSITION*/
+                padding: 0.25rem;
+    
+                /*DIMENSIONS*/
+                width: fit-content;
+            }
+    
+            img {
+                width: 150%;
+                height: auto;
+
+                transform: translate(-50%, -40%);
+                
+                transition: width 0.3s;
+            }
+        }
+
+        .gallery-img:hover {
+            height: 100%;
+            width: 100%;
+
+            img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+}
