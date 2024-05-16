@@ -3,6 +3,15 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+    width: 100vw;
+
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 h1, h2, p {
     width: fit-content;
     height: fit-content;
@@ -12,6 +21,10 @@ header, footer, main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+}
+
+main h3 {
+    margin: 1rem;
 }
 
 header, footer, menu {
@@ -127,7 +140,7 @@ menu img {
 
             img {
                 height: auto;
-                width: 100%;
+                width: 200%;
             }
         }
     }

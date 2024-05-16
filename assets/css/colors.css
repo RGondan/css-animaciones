@@ -1,17 +1,16 @@
 body {
     --color-1: #d93b3a;
     --color-2: #eb793d;
-    --color-3: #c5e4e6;
+    --color-3: #ffffff;
     --color-4: #756a7a;
     --color-5: #2b2622;
 
-    --font-color-1: #000000;
-    --font-color-2: #ffffff;
+    --square-color-1: #000000cb;
+    --square-color-2: #ffffffcb;
 
     --trans-color-1: #00000049;
 
-    height: 100vh;
-    width: 100vw;
+    --squareSize: 2rem;
 }
 
 header {
@@ -21,27 +20,40 @@ header {
 
 menu {
     background-color: var(--color-1);
-    color: var(--font-color-1);
+    color: var(--color-3);
 }
 
 main {
     background-color: var(--color-5);
-    color: var(--font-color-2);
+    color: var(--color-3);
 }
 
-footer, footer ul {
+footer {
     background-color: var(--color-5);
-    color: var(--color-4);
+    color: var(--color-2);
 }
 
-footer ul{
+footer i {
+    color: var(--color-3);
     transition: color 0.3s;
+    filter: drop-shadow(0px 0px 6px #000000);
 }
 
-footer li:hover {
-    color: var(--color-3)
+footer i:hover {
+    color: var(--color-2)
 }
 
 .gallery-wraper {
     background-color: var(--color-5);
+}
+
+.checkered {
+    background-color: var(--square-color-1);
+    background-image:
+      linear-gradient(45deg, var(--square-color-2) 25%, transparent 25%), 
+      linear-gradient(135deg, var(--square-color-2) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, var(--square-color-2) 75%),
+      linear-gradient(135deg, transparent 75%, var(--square-color-2) 75%);
+    background-size:calc(2 * var(--squareSize)) calc(2 * var(--squareSize)); 
+    background-position:0 0, var(--squareSize) 0, var(--squareSize) calc(-1 * var(--squareSize)), 0 calc(-1 * var(--squareSize)); 
 }
